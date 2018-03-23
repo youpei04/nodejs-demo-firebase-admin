@@ -1,0 +1,270 @@
+/* 页头和导航背景 */
+.topheader {
+    background: #FFFFFF;
+    font-size: 14px;
+}
+
+.topnav {
+    background: #FFFFFF;
+    font-size: 14px;
+}
+
+/* 主画面 */
+.main-content {
+    padding: 9px 14px;
+}
+
+/* 轮播 */
+.carousel {
+    max-height: 300px;
+}
+
+.carousel-inner > .item > img, .carousel-inner > .item > a > img {
+    display: block;
+    width: auto;
+    max-height: 300px;
+    margin: 0 auto;
+}
+
+.carousel-indicators li {
+    margin-bottom: -20px !important;
+    margin-left: 5px !important;
+    margin-right: 5px !important;
+    width: 15px;
+    height: 15px;
+    border: 2px solid #fff;
+    border-radius: 15px;
+}
+
+.carousel-indicators li.active {
+    width: 20px;
+    height: 20px;
+    background-color: #fff;
+}
+
+.carousel-caption {
+    font-size: 16px;
+    padding-bottom: 40px;
+}
+
+/* 通用 */
+section.container-fluid {
+    /*margin-top: 5px;*/
+}
+
+#indexmap {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    margin: 0;
+    font-family: "微软雅黑";
+    border: 2px dashed #bbbbbb;
+}
+
+.pull-middle {
+    display: inline-block;
+    vertical-align: middle !important;
+    word-spacing: normal;
+    height: 100%;
+}
+
+i {
+    margin-right: 5px !important;
+}
+
+.a-inherit {
+    color: inherit;
+}
+
+.news-sub-title {
+    border-top: 1px dashed #c1c1c1;
+    border-bottom: 1px dashed #c1c1c1;
+    padding: 5px 0;
+    margin-bottom: 10px;
+}
+
+/* side 左侧显示内容 */
+.side-header {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background: #34495e;
+    color: #fff;
+    margin-top: 5px;
+    border-radius: 0 3px 0 0;
+}
+
+.side-header .pull-right {
+    font-size: 10px;
+    margin: auto;
+    line-height: 2;
+}
+
+.side-body {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background: #FFFFFF;
+    margin-bottom: 5px;
+    border-radius: 0 0 3px;
+}
+
+.side-body ul {
+    list-style: disc;
+    padding-left: 15px;
+}
+
+.noborder {
+    border: none !important;
+    height: auto !important;
+}
+
+/* web 页面列表样式 */
+.ul-web-vg li {
+    list-style: none;
+    text-decoration: underline;
+}
+
+.ul-web li {
+    margin-bottom: 10px;
+    border-bottom: 1px dashed #c1c1c1;
+}
+
+.ul-web-form li {
+    list-style: none;
+    margin-bottom: 10px;
+    border-bottom: 1px dashed #c1c1c1;
+}
+
+.ul-web-form li img {
+    margin-bottom: 10px;
+}
+
+.ul-web-form li .pull-middle {
+    margin-top: 30px;
+}
+
+/* 页脚 */
+footer {
+    box-shadow: none;
+    margin-top: 5px;
+    margin-right: 14px !important;
+    margin-left: 14px !important;
+    background-color: #34495e;
+    font-size: 14px;
+    color: #fff;
+}
+
+footer span {
+    color: #9aa4af;
+}
+
+footer span:hover, span:focus {
+    color: #1abc9c;
+    cursor: pointer;
+}
+
+/* 导航菜单前的LOGO根据分辨率自动显示隐藏 */
+@media (min-width: 768px) {
+    .navbar-brand {
+        display: none;
+    }
+
+    section.container-body {
+        margin-left: 10px;
+    }
+}
+
+@media (max-width: 767px) {
+    .navbar-brand {
+        display: block;
+    }
+
+    section.container-body {
+        margin-left: 0 !important;
+    }
+}
+
+/* blockquto */
+.bs-callout-info {
+    border-left-color: #5bc0de;
+}
+
+.bs-callout {
+    padding: 20px;
+    margin: 20px 0;
+    border: 1px solid #eee;
+    border-left-width: 5px;
+    border-radius: 3px;
+}
+
+/* 推荐产品 */
+.demo-browser {
+    background-color: #34495e;
+    border-top: 1px solid white;
+    border-radius: 0 0 6px 6px;
+    color: white;
+    padding: 0;
+}
+
+.demo-browser-content {
+    background-color: #34495e;
+    border-radius: 0 0 6px;
+    overflow: hidden;
+    padding: 21px 0 0 20px;
+}
+
+.demo-browser-content > .pro {
+    width: 144px;
+    font-size: 14px;
+    text-align: center;
+    float: left;
+    margin: 0 15px 5px 0;
+}
+
+.demo-browser-content > .pro .pro-body {
+    margin: 8px 0 10px 0;
+}
+
+.demo-browser-content > .pro .pro-body p{
+    margin: 0;
+}
+
+.demo-browser-content > .col-sm-4 {
+    font-size: 14px;
+    text-align: center;
+}
+
+.demo-browser-content p {
+    font-size: 14px;
+}
+
+.demo-browser-content > .pro img {
+    border: 6px solid white;
+    width: 100%;
+}
+
+.demo-browser-content > .col-sm-4 > img {
+    border: 6px solid white;
+    max-width: 100%;
+}
+
+/* 产品详情页 图片展示 */
+.pro-pictures .col-sm-12 {
+    border: 1px dotted #c1c1c1;
+    background-color: #e4e8ed;
+}
+.pro-pictures .col-sm-12+.col-sm-12 {
+    border-top: none;
+}
+.pro-pictures .col-sm-12 img{
+    max-width:80%;
+    border: 6px solid white;
+    margin: 5px;
+}
+.pro-pictures .col-sm-3{
+    padding: 5px 3px;
+}
+.pro-pictures .col-sm-3 img{
+    max-width:99%;
+    border: 1px solid white;
+    margin: 0;
+}

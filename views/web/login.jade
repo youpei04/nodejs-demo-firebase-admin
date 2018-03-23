@@ -1,0 +1,35 @@
+extends ../layout
+
+block loadtitle
+    -var title='message push system | login'
+
+append styles
+    link(rel='stylesheet', href='/styles/login.css')
+
+block content
+    mixin toastr(status, msg)
+    .container: .login: .login-screen
+        .login-icon
+            img(src='/img/login/100_100.png',alt='Welcome to message push system')
+            h4 Welcome to
+                small message push
+                | system
+        .login-form
+            form(method='post',action='/web/login')
+                .form-group
+                    input.form-control.login-field#username(
+                        type='text',
+                        name='username'
+                        placeholder='account'
+                        value='#{username}')
+                    label.login-field-icon.fui-user(for='username')
+                .form-group
+                    input.form-control.login-field#login-pass(
+                        type='password',
+                        name='password'
+                        placeholder='password')
+                    label.login-field-icon.fui-lock(for='login-pass')
+                input.btn.btn-primary.btn-lg.btn-block(
+                    type='submit',
+                    value='login')
+                a.login-link(href='#') forget pwd?

@@ -1,0 +1,37 @@
+script(type='text/javascript',src='/js/jquery-1.9.1.min.js')
+script(type='text/javascript',src='/plugins/Flat-UI/js/flat-ui.js')
+script(type='text/javascript',src='/plugins/Flat-UI/js/application.js')
+script(type='text/javascript',src='/plugins/Flat-UI/js/prettify.js')
+script(type='text/javascript',src='/plugins/toastr/toastr.js')
+script(type='text/javascript',src='/plugins/modernizr/modernizr.js')
+script(type='text/javascript',src='/plugins/SmoothScroll/SmoothScroll.js')
+
+script(type='text/javascript',src='/plugins/bootstrap-datepicker/js/bootstrap-datepicker.js')
+script(type='text/javascript',src='/plugins/parsley/js/parsley.js')
+script(type='text/javascript',src='/plugins/pagination/jquery.pagination.js')
+script(type='text/javascript',src='/js/ie8-respond.js')
+script(type='text/javascript',src='/js/ie8-placeholder.js')
+script(type='text/javascript',src='/js/ie8-extend.js')
+script(type='text/javascript',src='/js/qrcode.js')
+script(type='text/javascript',src='/js/jquery.browser.js')
+script(type='text/javascript',src='/js/launch.js')
+
+script(type='text/javascript').
+    $(window).load(function () {
+        Plugins.init();
+
+        var browser = navigator.appName;
+        if (browser == 'Microsoft Internet Explorer') {
+            var appversion = navigator.appVersion;
+            var version = appversion.split(';');
+            var trim_Version = version[1].replace(/[ ]/g, '');
+
+            if (trim_Version == 'MSIE9.0' || trim_Version == 'MSIE8.0') {
+                // $('input, textarea').placeholder();
+            }
+            if (trim_Version == 'MSIE6.0' || trim_Version == 'MSIE7.0') {
+                alert('建议在IE8以上或者谷歌、火狐等浏览器浏览，当前IE内核为：' + trim_Version);
+                return;
+            }
+        }
+    });

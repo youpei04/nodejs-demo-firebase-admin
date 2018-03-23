@@ -1,0 +1,17 @@
+doctype html
+html
+    head
+        meta(charset='utf-8')
+        //Mobile Meta
+        meta(name='viewport',content='width=device-width, initial-scale=1.0')
+        block loadtitle
+        title= title
+        meta(name="keywords",content= keywords)
+        meta(name="description",content= description)
+        include core/styles
+        block styles
+    body
+        include core/toastr
+        block content
+        include core/scripts
+        block scripts

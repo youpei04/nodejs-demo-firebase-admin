@@ -1,0 +1,17 @@
+.sider_bar: .relative_box
+    .menu_title
+        .icon.left
+        p 菜单/MENU
+    .menu_list(style='top:40px'): .list_outer.content.mcustomscrollbox._mCS_1
+        .mCustomScrollBox.mCS-light#mCSB_1(style="position:relative; height:100%; overflow:hidden; max-width:100%;")
+            .mCSB_container.mCS_no_scrollbar(style="position:relative; top:0;")
+                .menu_single: a(href='/web/push',target='_self'): .menu_parent
+                    .menu_icon: i.fa.fa-sitemap
+                    p 推送服务
+            .mCSB_scrollTools(style="position: absolute; display: none;")
+                a.mCSB_buttonUp(oncontextmenu="return false;")
+                .mCSB_draggerContainer
+                    .mCSB_dragger(style="position: absolute; height: 540px; top: 0px;",oncontextmenu="return false;")
+                        .mCSB_dragger_bar(style="position: relative; line-height: 540px;")
+                    .mCSB_draggerRail
+                a.mCSB_buttonDown(oncontextmenu="return false;")

@@ -1,0 +1,53 @@
+extends layouts/layout
+append loadtitle
+    -title += ' | push service'
+
+append styles
+    link(rel='stylesheet', href='/plugins/kindeditor-4.1.11/themes/default/default.css')
+    link(rel='stylesheet', href='/plugins/kindeditor-4.1.11/plugins/code/prettify.css')
+
+block cms_content
+    .content_main
+        mixin toastr(status, msg)
+        .container-fluid
+            section.todo-content
+                div.panel-title.pll push message
+            .col-md-12: .box.box-info
+                .box-header.with-border: h3.box-title test push
+                form.form-horizontal(data-validate="parsley", method='post', action='/web/push/add')
+                    .box-body
+                        .col-sm-8
+                            .form-group
+                                input#id(name='id',type='hidden',value="#{message.id}")
+                                label.col-sm-2.control-label(for='title') title
+                                .col-sm-10: input#title.form-control.parsley-validated(name='title',type='text',placeholder='',
+                                value="#{message.title}",autocomplete="off",data-required="true")
+                            .form-group
+                                label.col-sm-2.control-label(for='content') message
+                                .col-sm-10: textarea#content.textarea.form-control.parsley-validated(name="content",
+                                placeholder="",
+                                rows="15") #{message.content}
+                            .form-group
+                                label.col-sm-2.control-label(for='content') reg_id
+                                .col-sm-10: textarea#content.textarea.form-control.parsley-validated(name="reg_ids",
+                                placeholder="",
+                                rows="5") #{message.reg_ids}
+                            .form-group: .col-sm-offset-2.col-sm-10
+                                input#btn_submit.btn.btn-info.mll(name='btn_submit',type='button',value='push')
+
+append scripts
+    script(type='text/javascript').
+        $("#btn_submit").on('click', function () {
+            var valid = $("form").parsley().validate();
+            if (!valid)
+                return;
+            $.ajax({
+                url: "/web/push/add",
+                type: "post",
+                dataType: "json",
+                data: $("form").serialize(),
+                success: function (data) {
+                    toastrShow(data.status, data.msg);
+                }
+            });
+        });

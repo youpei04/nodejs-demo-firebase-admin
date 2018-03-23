@@ -1,0 +1,40 @@
+extends ../../layout
+
+block loadtitle
+    -var title='企业管理系统'
+
+append styles
+    link(rel='stylesheet', href='/styles/web/frame.css')
+    link(rel='stylesheet', href='/styles/web/main.css')
+    link(rel='stylesheet', href='/styles/web/adpat.css')
+    link(rel='stylesheet', href='/styles/web/jquery.mCustomScrollbar.css')
+    link(rel='stylesheet', href='/styles/web/box.css')
+    link(rel='stylesheet', href='/styles/loading.css')
+    link(rel='shortcut icon',href='/img/web/favicon.ico')
+
+block content
+    include ../includes/header
+    include ../includes/menu
+    block cms_content
+    include ../includes/footer
+
+    #loading.spinner-div: .spinner
+        .spinner-container.container1
+            .circle1
+            .circle2
+            .circle3
+            .circle4
+        .spinner-container.container2
+            .circle1
+            .circle2
+            .circle3
+            .circle4
+        .spinner-container.container3
+            .circle1
+            .circle2
+            .circle3
+            .circle4
+
+append scripts
+    script(type='text/javascript',src='/js/web/frame.js')
+    script(type='text/javascript',src='/js/web/jquery.mCustomScrollbar.concat.min.js')
